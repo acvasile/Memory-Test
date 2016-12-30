@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#009688"
+    android:weightSum="100"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="MEMORY \n TEST"
+        android:lines="2"
+        android:layout_width="match_parent"
+        android:layout_weight="25"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        android:id="@+id/txtMemory"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="45sp" />
+    <Button
+        android:text="Sign In"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:background= "#000000"
+        android:id="@+id/btnSignIn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15sp" />
+    <Button
+        android:text="Sign Up With Email"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:id="@+id/btnSignUp"
+        android:background="#000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15sp" />
+</LinearLayout>
