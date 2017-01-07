@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#009688"
+    android:weightSum="100"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="LEVEL 1"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_weight="15"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        android:id="@+id/txtTestLevel"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:textSize="35sp" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:id="@+id/gridLayoutLives"
+        android:rowCount="1"
+        android:columnCount="2"
+        android:alignmentMode="alignMargins"
+        android:orientation="horizontal"
+        android:rowOrderPreserved="true"
+        android:useDefaultMargins="true"
+        android:columnOrderPreserved="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <TextView
+            android:text="LIVES 3"
+            android:textColor="#ffffff"
+            android:id="@+id/txtYourLives"
+            android:textStyle="normal"
+            android:textSize="25sp"
+            android:layout_columnWeight="1"
+            android:gravity="left" />
+        <TextView
+            android:text="COMBO X1"
+            android:textColor="#ffffff"
+            android:id="@+id/txtYourCombo"
+            android:textStyle="normal"
+            android:textSize="25sp"
+            android:layout_columnWeight="1"
+            android:gravity="right" />
+    </GridLayout>
+    <TextView
+        android:text="0 POINTS"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        android:id="@+id/txtTestScore"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:textSize="30sp" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="48"
+        android:id="@+id/gridTestThree"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:alignmentMode="alignMargins"
+        android:orientation="horizontal"
+        android:rowOrderPreserved="true"
+        android:useDefaultMargins="true"
+        android:columnOrderPreserved="true">
+        <Button
+            android:id="@+id/testThree1"
+            android:background="@drawable/TestButtonUnchecked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/testThree2"
+            android:background="@drawable/TestButtonUnchecked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/testThree3"
+            android:background="@drawable/TestButtonUnchecked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/testThree4"
+            android:background="@drawable/TestButtonUnchecked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/testThree5"
+            android:background="@drawable/TestButtonUnchecked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/testThree6"
+            android:background="@drawable/TestButtonUnchecked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/testThree7"
+            android:background="@drawable/TestButtonUnchecked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/testThree8"
+            android:background="@drawable/TestButtonUnchecked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/testThree9"
+            android:background="@drawable/TestButtonUnchecked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center" />
+    </GridLayout>
+    <TextView
+        android:text="Please Click on the containers in corresponding order after they become standart again"
+        android:lines="3"
+        android:layout_width="match_parent"
+        android:layout_weight="15"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        android:id="@+id/txtTestHint"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:textAllCaps="true" />
+</LinearLayout>

@@ -45,7 +45,25 @@ namespace Memory_Test
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int ic_launcher = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Icon = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int MemoryTipsButton = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int MyResultButton = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int StartTestButton = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int TestButtonChecked = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int TestButtonUnchecked = 2130837510;
 			
 			static Drawable()
 			{
@@ -60,14 +78,86 @@ namespace Memory_Test
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int btnSignIn = 2131034113;
+			// aapt resource value: 0x7f050004
+			public const int btnMemoryTips = 2131034116;
 			
 			// aapt resource value: 0x7f050002
-			public const int btnSignUp = 2131034114;
+			public const int btnMyResult = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int btnStartTest = 2131034115;
+			
+			// aapt resource value: 0x7f05000c
+			public const int gridLayoutLives = 2131034124;
+			
+			// aapt resource value: 0x7f050010
+			public const int gridTestThree = 2131034128;
+			
+			// aapt resource value: 0x7f050011
+			public const int testThree1 = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int testThree2 = 2131034130;
+			
+			// aapt resource value: 0x7f050013
+			public const int testThree3 = 2131034131;
+			
+			// aapt resource value: 0x7f050014
+			public const int testThree4 = 2131034132;
+			
+			// aapt resource value: 0x7f050015
+			public const int testThree5 = 2131034133;
+			
+			// aapt resource value: 0x7f050016
+			public const int testThree6 = 2131034134;
+			
+			// aapt resource value: 0x7f050017
+			public const int testThree7 = 2131034135;
+			
+			// aapt resource value: 0x7f050018
+			public const int testThree8 = 2131034136;
+			
+			// aapt resource value: 0x7f050019
+			public const int testThree9 = 2131034137;
+			
+			// aapt resource value: 0x7f050001
+			public const int txtAppDescription = 2131034113;
+			
+			// aapt resource value: 0x7f050007
+			public const int txtBestScore = 2131034119;
+			
+			// aapt resource value: 0x7f050008
+			public const int txtMediumScore = 2131034120;
 			
 			// aapt resource value: 0x7f050000
 			public const int txtMemory = 2131034112;
+			
+			// aapt resource value: 0x7f05000a
+			public const int txtMemoryDescription = 2131034122;
+			
+			// aapt resource value: 0x7f050005
+			public const int txtMemoryTips = 2131034117;
+			
+			// aapt resource value: 0x7f05001a
+			public const int txtTestHint = 2131034138;
+			
+			// aapt resource value: 0x7f05000b
+			public const int txtTestLevel = 2131034123;
+			
+			// aapt resource value: 0x7f05000f
+			public const int txtTestScore = 2131034127;
+			
+			// aapt resource value: 0x7f05000e
+			public const int txtYourCombo = 2131034126;
+			
+			// aapt resource value: 0x7f05000d
+			public const int txtYourLives = 2131034125;
+			
+			// aapt resource value: 0x7f050009
+			public const int txtYourMemory = 2131034121;
+			
+			// aapt resource value: 0x7f050006
+			public const int txtYourResults = 2131034118;
 			
 			static Id()
 			{
@@ -84,6 +174,15 @@ namespace Memory_Test
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int MemoryTips = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int MyScores = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Test = 2130903043;
 			
 			static Layout()
 			{

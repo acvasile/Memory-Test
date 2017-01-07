@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#009688"
+    android:weightSum="100"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="YOUR RESULTS"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_weight="15"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        android:id="@+id/txtYourResults"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="35sp" />
+    <TextView
+        android:text="BEST SCORE 0"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        android:id="@+id/txtBestScore"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:textSize="30sp" />
+    <TextView
+        android:text="MEDIUM SCORE 0"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        android:id="@+id/txtMediumScore"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:textSize="30sp" />
+    <TextView
+        android:text="YOUR MEMORY:"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_weight="8"
+        android:layout_height="0dp"
+        android:textColor="#cbcbcb"
+        android:id="@+id/txtYourMemory"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_weight="50"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:fillViewport="false">
+        <TextView
+            android:text="Lorem ipsum"
+            android:maxLines="200"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="#ffffff"
+            android:id="@+id/txtMemoryDescription"
+            android:gravity="center_vertical"
+            android:textStyle="normal"
+            android:textSize="20sp" />
+    </ScrollView>
+</LinearLayout>

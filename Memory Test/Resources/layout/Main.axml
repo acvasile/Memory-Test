@@ -8,34 +8,78 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
-        android:text="MEMORY \n TEST"
+        android:text="MEMORY                                    TEST"
         android:lines="2"
         android:layout_width="match_parent"
-        android:layout_weight="25"
+        android:layout_weight="28"
         android:layout_height="0dp"
         android:textColor="#ffffff"
         android:id="@+id/txtMemory"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="45sp" />
+    <TextView
+        android:text="This app will help you to determine how good your visual memory is. Feel free to contact developers if you occur problems."
+        android:layout_width="match_parent"
+        android:layout_weight="27"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        android:id="@+id/txtAppDescription"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+        android:textSize="18sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp" />
     <Button
-        android:text="Sign In"
+        android:text="MY RESULTS"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="15"
-        android:background= "#000000"
-        android:id="@+id/btnSignIn"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="15sp" />
+        android:layout_weight="10"
+        android:background="@drawable/MyResultButton"
+        android:id="@+id/btnMyResult"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:shadowColor="#000444"
+        android:gravity="center" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:layout_height="0dp" />
     <Button
-        android:text="Sign Up With Email"
+        android:text="START TEST"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="15"
-        android:id="@+id/btnSignUp"
-        android:background="#000000"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="15sp" />
+        android:layout_weight="10"
+        android:id="@+id/btnStartTest"
+        android:background="@drawable/StartTestButton"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:shadowColor="#000444"
+        android:gravity="center" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:layout_height="0dp" />
+    <Button
+        android:text="MEMORY TIPS"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:id="@+id/btnMemoryTips"
+        android:background="@drawable/MemoryTipsButton"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:shadowColor="#000444"
+        android:gravity="center" />
 </LinearLayout>
