@@ -168,7 +168,18 @@ namespace Memory_Test
 
         private void endTest()
         {
-
+            //WRITE TO FILE RESULTS!!!!!
+            //VERY IMPORTANT!!!!
+            //DON`T FORGET!!!!!
+            txtTestScore.Text = "Test finished!";
+            System.Threading.Thread.Sleep(3000);
+            lives = 3;
+            combo = 0;
+            level = 1;
+            score = 0;
+            this.resetButtons();
+            this.resetPressedIndexes();
+            this.setAllInfo();
         }
 
         private void activateButtonsDemo()
