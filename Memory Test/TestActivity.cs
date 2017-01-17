@@ -29,8 +29,8 @@ namespace Memory_Test
         private TextView txtTestScore;
         private LinearLayout linearLayoutTest;
 
-        private Button[] testButtons = new Button[16];
-        private int[] pressedIndexes = new int[16];
+        private Button[] testButtons = new Button[9];
+        private int[] pressedIndexes = new int[9];
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,7 +40,7 @@ namespace Memory_Test
             SetContentView(Resource.Layout.Test);
 
             lives = 3;
-            combo = 1;
+            combo = 0;
             level = 1;
             score = 0;
             txtTestLevel = FindViewById<TextView>(Resource.Id.txtTestLevel);
@@ -48,13 +48,8 @@ namespace Memory_Test
             txtYourCombo = FindViewById<TextView>(Resource.Id.txtYourCombo);
             txtTestScore = FindViewById<TextView>(Resource.Id.txtTestScore);
 
-            for (int i = 0; i < 16; i++)
-            {
-                testButtons[i] = new Button(this.ApplicationContext);
-            }
-
-            setAllInfo();
-            setTestThree();
+            this.assignAllButtons();
+            this.setAllInfo();
 
         }
 
@@ -114,19 +109,144 @@ namespace Memory_Test
             txtTestScore.SetText(spanCurrentString, TextView.BufferType.Spannable);
         }
         
-        private void setTestThree()
+        private double getWaitTime()
         {
-            
+            if (this.level < 5)
+            {
+                return Math.Sqrt(10.0 + this.level) / (10.0 + this.level) * 8;
+            } else if (this.level < 10)
+            {
+                return Math.Sqrt(10.0 + this.level) / (10.0 + this.level) * 7;
+            } else if (this.level < 15)
+            {
+                return Math.Sqrt(10.0 + this.level) / (10.0 + this.level) * 6;
+            } else if (this.level < 20)
+            {
+                return Math.Sqrt(10.0 + this.level) / (10.0 + this.level) * 5;
+            } else if (this.level < 25)
+            {
+                return Math.Sqrt(10.0 + this.level) / (10.0 + this.level) * 4.5;
+            } else if (this.level < 30)
+            {
+                return Math.Sqrt(10.0 + this.level) / (10.0 + this.level) * 4;
+            } else if (this.level < 40)
+            {
+                return Math.Sqrt(10.0 + this.level) / (10.0 + this.level) * 3.2;
+            } else if (this.level < 50)
+            {
+                return Math.Sqrt(10.0 + this.level) / (10.0 + this.level) * 2.4;
+            } else
+            {
+                return Math.Sqrt(10.0 + this.level) / (10.0 + this.level) * 1.2;
+            }  
         }
 
-        private void setTestFour()
+        private void onSuccessSolve()
         {
-            
+            this.score += (int)((1 + this.level * 0.5) * 10 * (1 + this.combo * 0.1));
+            this.combo++;
+            this.level++;
+            this.resetPressedIndexes();
+            this.setAllInfo();
+            this.resetButtons();
+        }
+
+        private void onFailSolve()
+        {
+            this.lives--;
+            this.combo = 0;
+            if (this.lives <= 0)
+            {
+                this.endTest();
+                return;
+            }
+            this.level++;
+            this.resetPressedIndexes();
+            this.setAllInfo();
+            this.resetButtons();
+        }
+
+        private void endTest()
+        {
+
+        }
+
+        private void activateButtonsDemo()
+        {
+            int count = this.getCountButtons();
+            double time = this.getWaitTime();
+            int mseconds = (int)(time * 1000);
+
+            for (int i = 0; i < count; i++)
+            {
+                this.testButtons[i].SetBackgroundResource(Resource.Drawable.TestButtonChecked);
+                System.Threading.Thread.Sleep(mseconds);
+            }
+
+            this.resetButtons();
+        }
+
+        private void resetButtons()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                this.testButtons[i].SetBackgroundResource(Resource.Drawable.TestButtonUnchecked);
+            }
+        }
+
+        private int getCountButtons()
+        {
+            if (this.level < 5)
+            {
+                return 1;
+            } else if (this.level < 9)
+            {
+                return 2;
+            } else if (this.level < 17)
+            {
+                return 3;
+            } else if (this.level < 25)
+            {
+                return 4;
+            } else if (this.level < 35)
+            {
+                return 5;
+            } else
+            {
+                return 6;
+            }
+        }
+
+        private void generateRandomButtons()
+        {
+            int t = -1;
+            Random random = new Random();
+            for (int i = 0; i < this.getCountButtons(); i++)
+            {
+                while (this.pressedIndexes.Contains(t))
+                {
+                    t = random.Next(0, 9);
+                }
+                this.pressedIndexes[i] = t;
+            }
+        }
+
+        private void assignAllButtons()
+        {
+            this.testButtons[0] = FindViewById<Button>(Resource.Id.testThree1);
+            this.testButtons[1] = FindViewById<Button>(Resource.Id.testThree2);
+            this.testButtons[2] = FindViewById<Button>(Resource.Id.testThree3);
+            this.testButtons[3] = FindViewById<Button>(Resource.Id.testThree4);
+            this.testButtons[4] = FindViewById<Button>(Resource.Id.testThree5);
+            this.testButtons[5] = FindViewById<Button>(Resource.Id.testThree6);
+            this.testButtons[6] = FindViewById<Button>(Resource.Id.testThree7);
+            this.testButtons[7] = FindViewById<Button>(Resource.Id.testThree8);
+            this.testButtons[8] = FindViewById<Button>(Resource.Id.testThree9);
         }
 
         private void resetPressedIndexes()
         {
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 9; i++)
             {
                 pressedIndexes[i] = -1;
             }
